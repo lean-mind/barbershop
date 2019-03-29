@@ -80,8 +80,8 @@ public class AppointmentShould extends IntegrationTests {
         establishmentService.create(Configuration.establishmentName, webCredentials);
     }
 
-    private void waitForElementWithId(String className, WebDriver browser) {
+    private void waitForElementWithId(String elementId, WebDriver browser) {
         WebDriverWait waiter = new WebDriverWait(browser, 5);
-        waiter.until(presenceOfElementLocated(By.id(className)));
+        waiter.until(presenceOfElementLocated(By.id(elementId)));
     }
 }
